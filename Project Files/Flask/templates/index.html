@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Flood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Floods Prediction</h2>
+    <a href="/">Home</a>
+</div>
+
+<div class="form-box">
+    <form action="/result" method="post">
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Temperature</label>
+                <input type="text" name="temp" placeholder="Enter Temperature in °C" required>
+            </div>
+            <div class="form-group">
+                <label>Humidity</label>
+                <input type="text" name="humidity" placeholder="Enter Humidity in %" required>
+            </div>
+            <div class="form-group">
+                <label>Cloud Cover</label>
+                <input type="text" name="cloud" placeholder="Cloud Cover Percentage (%)" required>
+            </div>
+            <div class="form-group">
+                <label>Annual Rain Fall</label>
+                <input type="text" name="annual" placeholder="Enter Annual Rain Fall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>Jan-Feb Rainfall</label>
+                <input type="text" name="janfeb" placeholder="Jan-Feb Rainfall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>March-May Rainfall</label>
+                <input type="text" name="marmay" placeholder="March-May Rainfall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>June-September</label>
+                <input type="text" name="junsep" placeholder="June-September Rainfall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>Oct-Dec Rainfall</label>
+                <input type="text" name="octdec" placeholder="Oct-Dec Rainfall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>Average June</label>
+                <input type="text" name="avgjune" placeholder="Average June Rainfall in mm" required>
+            </div>
+            <div class="form-group">
+                <label>Sub-division Code</label>
+                <input type="text" name="sub" placeholder="Sub-division Code" required>
+            </div>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
